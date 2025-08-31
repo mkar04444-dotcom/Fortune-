@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortune Cookie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Magical Background Sparkles -->
+  <div id="backgroundSparkles"></div>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="page">
+    <h1>Welcome!</h1>
+    <p>Please enter your name to continue:</p>
+    <input type="text" id="username" placeholder="Your Name">
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <!-- Fortune Cookie Page -->
+  <div id="cookiePage" class="page" style="display:none;">
+    <h1>🥠 Fortune Cookie</h1>
+    <p id="greet"></p>
+    <img id="cookie" 
+         src="1.png" 
+         alt="Fortune Cookie" 
+         onclick="crackCookie()">
+    
+    <!-- Fortune window below cookie -->
+    <div id="fortuneContainer">
+      <p id="fortune"></p>
+    </div>
+    
+    <button id="resetBtn" onclick="resetCookie()" style="display:none;">Try Again</button>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="crackSound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+  <audio id="dingSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
